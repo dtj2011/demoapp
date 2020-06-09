@@ -7,7 +7,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet publish -c release -o ./demoapp/build_output demoapp.csproj
+      - dotnet build 
 artifacts:
   files:
     - demoapp/bin/netcoreapp3.1
