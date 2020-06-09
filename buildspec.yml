@@ -10,5 +10,5 @@ phases:
       - dotnet build 
 artifacts:
   files:
-    - demoapp/bin/netcoreapp3.1
+    - demoapp/bin/netcoreapp3.1/*
     - demoapp/wwwroot/**/*
