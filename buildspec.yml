@@ -7,7 +7,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet build 
+      - dotnet build ./demoapp/demoapp.csproj
 artifacts:
   files:
     - demoapp/bin/netcoreapp3.1/*
