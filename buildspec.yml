@@ -10,5 +10,5 @@ commands:
 - dotnet publish -c release -o ./demoapp/build_output demoapp.csproj
 artifacts:
 files:
-- demoapp/build_output/**/*
+- demoapp/bin/netcoreapp3.1
 - demoapp/wwwroot/**/*
