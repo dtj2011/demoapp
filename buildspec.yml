@@ -12,3 +12,5 @@ artifacts:
   files:
     - demoapp/bin/netcoreapp3.1/*
     - demoapp/wwwroot/**/*
+    -installApp.sh
+    -appspec.yml
