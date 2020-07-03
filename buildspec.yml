@@ -2,11 +2,9 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo Restore started on `date`
       - dotnet restore ./demoapp/demoapp.csproj
   build:
     commands:
-      - echo Build started on `date`
       - dotnet build ./demoapp/demoapp.csproj -o ./demoapp/build_artifacts
 artifacts:
   files:
