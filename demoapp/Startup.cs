@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using demoapp.Data;
+using BAL;
+using DAL;
 
 namespace demoapp
 {
@@ -29,6 +31,8 @@ namespace demoapp
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            services.AddSingleton<IService,Service>();
+            services.AddSingleton<IDataAccess,DataAccess>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
