@@ -1,0 +1,1 @@
+move C:\Users\Administrator\Desktop\demoapp\build_artifacts\*.* C:\Users\Administrator\Desktop\build_release

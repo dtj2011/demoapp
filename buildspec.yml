@@ -11,5 +11,5 @@ artifacts:
     - demoapp/build_artifacts/**/*
     - installApp.ps1
     - stopApp.ps1
-    - moveFiles.ps1
+    - moveFiles.bat
     - appspec.yml
