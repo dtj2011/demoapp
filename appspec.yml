@@ -3,9 +3,3 @@ os: windows
 files:
   - source: .\
     destination: C:\Users\Administrator\Desktop
-hooks:
-  BeforeInstall:
-      - location: stopApp.ps1 
-  ApplicationStart:
-    - location: installApp.ps1
-      timeout: 300
