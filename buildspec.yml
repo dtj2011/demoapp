@@ -5,7 +5,7 @@ phases:
       - dotnet restore ./demoapp/demoapp.csproj
   build:
     commands:
-      - dotnet publish ./demoapp/demoapp.csproj -o ./demoapp/build_artifacts --configuration Release 
+      - dotnet publish ./demoapp/demoapp.csproj -o ./demoapp/build_artifacts --configuration Release --framework netcoreapp3.1
 artifacts:
   files:
     - demoapp/build_artifacts/**/*

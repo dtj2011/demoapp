@@ -1,1 +1,1 @@
-Start-IISSite -Name 'MyWebsite'
+Start-IISSite -Name 'demoapp'
