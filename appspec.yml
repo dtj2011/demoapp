@@ -2,7 +2,7 @@ version: 0.0
 os: windows
 files:
   - source: .\
-    destination: C:\Users\Administrator\Desktop\build_artifacts
+    destination: C:\Users\Administrator\Desktop
 hooks:
   BeforeInstall:
       - location: stopApp.ps1 

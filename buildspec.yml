@@ -5,11 +5,7 @@ phases:
       - dotnet restore ./demoapp/demoapp.csproj
   build:
     commands:
-      - dotnet publish ./demoapp/demoapp.csproj -o ./demoapp/build_artifacts --configuration Release
-  post_build:
-    commands:
-      - mv build_artifacts/* ./
-      - rm -R build_artifacts   
+      - dotnet publish ./demoapp/demoapp.csproj -o ./demoapp/build_artifacts --configuration Release 
 artifacts:
   files:
     - demoapp/build_artifacts/**/*
