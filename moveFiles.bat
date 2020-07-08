@@ -1,2 +1,2 @@
-move C:\Users\Administrator\Desktop\build_release\demoapp\build_artifacts\*.* C:\Users\Administrator\Desktop\build_release
-del C:\Users\Administrator\Desktop\build_release\demoapp
+robocopy C:\Users\Administrator\Desktop\build_release\demoapp\build_artifacts\ C:\Users\Administrator\Desktop\build_release
+rd /s /q C:\Users\Administrator\Desktop\build_release\demoapp
