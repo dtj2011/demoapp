@@ -5,10 +5,16 @@ phases:
       - dotnet restore ./demoapp/demoapp.csproj
   build:
     commands:
-      - dotnet build ./demoapp/demoapp.csproj -o ./demoapp/build_artifacts
+      - dotnet publish ./demoapp/demoapp.csproj -o ./demoapp/build_artifacts --configuration Release
+  post-build:
+    commands:
+      - mv build_artifacts/**/* ./
+      - mv build_artifacts/* ./
+      - rm -R build-output    
 artifacts:
   files:
     - demoapp/build_artifacts/**/*
     - demoapp/wwwroot/**/*
-    - installApp.sh
+    - installApp.ps1
+    - stopApp.ps1
     - appspec.yml

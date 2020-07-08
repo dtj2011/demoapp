@@ -1,9 +1,11 @@
 version: 0.0
-os: linux
+os: windows
 files:
-  - source: ./
-    destination: /home/ec2-user
+  - source: .\
+    destination: C:\Users\Administrator\Desktop\build_artifacts
 hooks:
+  BeforeInstall:
+      - location: stopApp.ps1 
   ApplicationStart:
-    - location: installApp.sh
+    - location: installApp.ps1
       timeout: 300

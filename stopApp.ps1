@@ -1,0 +1,1 @@
+Stop-IISSite -Name "demoapp"

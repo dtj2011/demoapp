@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - dotnet restore ./demoapp/demoapp.csproj
+  build:
+    commands:
+      - dotnet build ./demoapp/demoapp.csproj -o ./demoapp/build_artifacts
+artifacts:
+  files:
+    - demoapp/build_artifacts/**/*
+    - demoapp/wwwroot/**/*
+    - installApp.sh
+    - appspec.yml
