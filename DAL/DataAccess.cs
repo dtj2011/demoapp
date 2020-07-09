@@ -21,7 +21,7 @@ namespace DAL
                 using(SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
                     connection.Open();
-                    string query = "Select * from Products";
+                    string query = "Select * from demoUsers";
 
                     using(SqlCommand command = new SqlCommand(query,connection))
                     {
@@ -29,18 +29,23 @@ namespace DAL
                         {
                             while(reader.Read())
                             {
-                                result += (reader.GetString(0) + " " + reader.GetString(1));
+                                int userid = Convert.ToInt32(reader["User_id"]);
+                                string firstname = Convert.ToString(reader["User_firstname"]);
+                                string lastname = Convert.ToString(reader["User_Lastname"]);
+                                string email = Convert.ToString(reader["User_Email"]);
+                                string phone = Convert.ToString(reader["User_Phone"]);
+                                result += $"\n {userid} {firstname} {lastname} {email} {phone}";
                             }
                         }
                     }
                     return result;
                 }  
             }
-            catch(SqlException se)
+            catch(SqlException)
             {
                 throw;
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 throw;
             }
